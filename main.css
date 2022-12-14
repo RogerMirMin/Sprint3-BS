@@ -60,6 +60,10 @@ header:hover {
   font-family: "Arial" !important;
 }
 
+.ttl {
+  padding-right: 0 !important;
+}
+
 .input-container {
   height: 5rem;
   width: 5rem;
