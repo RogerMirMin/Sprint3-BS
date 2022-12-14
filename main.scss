@@ -69,10 +69,6 @@ header:hover{
         }
 }
 
-/*.card-body, .card-footer{
-    background-color: $torrat !important;
-}*/
-
 .card{
     border: none !important;
     &:hover{
@@ -97,6 +93,85 @@ $custom-theme-colors: (
 );
 
 $theme-colors: map-merge($custom-theme-colors, $theme-colors);
+
+//Checkout
+//donem dimensions al container invisible
+.input-container {
+    height: 5rem;
+    width: 5rem;
+}
+//fem invisible el radio input real
+// + stretch per omplir el container
+.radio-button {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    cursor: pointer;
+    }
+
+    .radio-tile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        border: 2px solid black;
+        border-radius: 5px;
+        padding: 1rem;
+    }
+
+    .icon{
+        color: black;
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .radio-tile-label {
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: black;
+    }
+
+    .radio-button:hover+.radio-tile{
+        background-color: white;
+        border: 2px solid $verd-fosc;
+
+        .icon {
+        color: $verd-fosc;
+        background-color: white;
+        }
+
+        .radio-tile-label {
+            color: $verd-fosc;
+            background-color: white;
+        }
+
+    }
+
+    .radio-button:checked+.radio-tile {
+        background-color: $verd-fosc;
+        border: 2px solid $verd-fosc;
+        color: white;
+        transform: scale(1.1, 1.1);
+    
+    .icon{
+            color: white;
+            background-color: $verd-fosc;
+        }
+    
+    .radio-tile-label {
+        color: white;
+        background-color: $verd-fosc
+        }
+}
 
 
 @import "./node_modules/bootstrap/scss/bootstrap";
