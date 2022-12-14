@@ -1,5 +1,3 @@
-import { products } from "./products.js";
-
 // Array with products (objects) added directly with push(). Products in this array are repeated.
 var cartList = [];
 
@@ -106,7 +104,7 @@ function printCart() {
 
 
     for (let i = 0; i < cart.length; i++) {
-        newElements += `<tr><th scope="row">${cart[i].name}</th><td>${cart[i].price}</td><td>${cart[i].quantity}</td><td>${cart[i].subtotalWithDiscount}</td><td><button type="button" class="btn rounded-circle p-2 border-0" onclick="removeFromCart(${cart[i].id})">-</button><button type="button" class="btn border-0 ms-1 p-0 rounded-circle" onclick="add1ToCart(${cart[i].id})">+</button></td></tr>`;
+        newElements += `<tr><th scope="row">${cart[i].name}</th><td>${cart[i].price}</td><td>${cart[i].quantity}</td><td>${cart[i].subtotalWithDiscount}</td><td><button type="button" class="btn rounded-circle ps-0 pe-2 border-0" onclick="removeFromCart(${cart[i].id})">-</button><button type="button" class="btn border-0 ms-1 p-0 rounded-circle" onclick="add1ToCart(${cart[i].id})">+</button></td></tr>`;
         totalprice += cart[i].subtotalWithDiscount;
     }
 
