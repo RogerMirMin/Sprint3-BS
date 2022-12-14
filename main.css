@@ -1,4 +1,14 @@
 @charset "UTF-8";
+.btn-taronja:hover {
+  background-color: white !important;
+  color: #ff9900 !important;
+}
+
+.btn-verd-fosc:hover {
+  background-color: white !important;
+  color: #266150 !important;
+}
+
 .navbar-brand {
   transition: 1s;
 }
@@ -23,6 +33,13 @@
   box-shadow: none !important;
 }
 
+.nav-link {
+  color: #266150 !important;
+}
+.nav-link:hover {
+  color: #ff9900 !important;
+}
+
 header {
   transition: 1s;
 }
@@ -30,23 +47,6 @@ header {
 header:hover {
   background-color: #ff9900 !important;
   color: #fff !important;
-}
-
-.btn-taronja:hover {
-  background-color: white !important;
-  color: #ff9900 !important;
-}
-
-.btn-verd-fosc:hover {
-  background-color: white !important;
-  color: #266150 !important;
-}
-
-.nav-link {
-  color: #266150 !important;
-}
-.nav-link:hover {
-  color: #ff9900 !important;
 }
 
 .card {
@@ -66,13 +66,8 @@ header:hover {
 }
 
 .radio-button {
-  opacity: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
   width: 100%;
-  margin: 0;
   cursor: pointer;
 }
 
@@ -164,7 +159,6 @@ header:hover {
   --bs-rosa-clar: #e8cebf;
   --bs-verd-fosc: #266150;
   --bs-rosa-suauplus: #fcf4f0;
-  --bs-torrat: #ddaf94;
   --bs-rosa-suau: #fbead5;
   --bs-white: white;
   --bs-grey: grey;
@@ -180,7 +174,6 @@ header:hover {
   --bs-rosa-clar-rgb: 232, 206, 191;
   --bs-verd-fosc-rgb: 38, 97, 80;
   --bs-rosa-suauplus-rgb: 252, 244, 240;
-  --bs-torrat-rgb: 221, 175, 148;
   --bs-rosa-suau-rgb: 251, 234, 213;
   --bs-white-rgb: 255, 255, 255;
   --bs-grey-rgb: 128, 128, 128;
@@ -197,10 +190,10 @@ header:hover {
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: "Segoe Script" !important;
-  --bs-font-monospace: "Segoe Script" !important;
+  --bs-font-sans-serif: "Segoe Script", "Arial", "Verdana" !important;
+  --bs-font-monospace: "Courier New" !important;
   --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
-  --bs-body-font-family: Segoe Script !important;
+  --bs-body-font-family: Segoe Script, Arial, Verdana !important;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
   --bs-body-line-height: 1.5;
@@ -2169,9 +2162,9 @@ progress {
 .form-control:focus {
   color: #212529;
   background-color: #fff;
-  border-color: #86b7fe;
+  border-color: #266150;
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 5px #266150;
 }
 .form-control::-webkit-date-and-time-value {
   height: 1.5em;
@@ -3094,23 +3087,6 @@ textarea.form-control-lg {
   --bs-btn-disabled-border-color: #fcf4f0;
 }
 
-.btn-torrat {
-  --bs-btn-color: #000;
-  --bs-btn-bg: #ddaf94;
-  --bs-btn-border-color: #ddaf94;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #e2bba4;
-  --bs-btn-hover-border-color: #e0b79f;
-  --bs-btn-focus-shadow-rgb: 188, 149, 126;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #e4bfa9;
-  --bs-btn-active-border-color: #e0b79f;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: #ddaf94;
-  --bs-btn-disabled-border-color: #ddaf94;
-}
-
 .btn-rosa-suau {
   --bs-btn-color: #000;
   --bs-btn-bg: #fbead5;
@@ -3363,23 +3339,6 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #fcf4f0;
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #fcf4f0;
-  --bs-gradient: none;
-}
-
-.btn-outline-torrat {
-  --bs-btn-color: #ddaf94;
-  --bs-btn-border-color: #ddaf94;
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: #ddaf94;
-  --bs-btn-hover-border-color: #ddaf94;
-  --bs-btn-focus-shadow-rgb: 221, 175, 148;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: #ddaf94;
-  --bs-btn-active-border-color: #ddaf94;
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #ddaf94;
-  --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: #ddaf94;
   --bs-gradient: none;
 }
 
@@ -5154,15 +5113,6 @@ textarea.form-control-lg {
   color: #514e4d;
 }
 
-.alert-torrat {
-  --bs-alert-color: #58463b;
-  --bs-alert-bg: #f8efea;
-  --bs-alert-border-color: #f5e7df;
-}
-.alert-torrat .alert-link {
-  color: #46382f;
-}
-
 .alert-rosa-suau {
   --bs-alert-color: #645e55;
   --bs-alert-bg: #fefbf7;
@@ -5611,20 +5561,6 @@ textarea.form-control-lg {
   color: #fff;
   background-color: #656260;
   border-color: #656260;
-}
-
-.list-group-item-torrat {
-  color: #58463b;
-  background-color: #f8efea;
-}
-.list-group-item-torrat.list-group-item-action:hover, .list-group-item-torrat.list-group-item-action:focus {
-  color: #58463b;
-  background-color: #dfd7d3;
-}
-.list-group-item-torrat.list-group-item-action.active {
-  color: #fff;
-  background-color: #58463b;
-  border-color: #58463b;
 }
 
 .list-group-item-rosa-suau {
@@ -6207,7 +6143,7 @@ textarea.form-control-lg {
   display: block;
   padding: var(--bs-tooltip-arrow-height);
   margin: var(--bs-tooltip-margin);
-  font-family: "Segoe Script" !important;
+  font-family: "Segoe Script", "Arial", "Verdana" !important;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -6317,7 +6253,7 @@ textarea.form-control-lg {
   z-index: var(--bs-popover-zindex);
   display: block;
   max-width: var(--bs-popover-max-width);
-  font-family: "Segoe Script" !important;
+  font-family: "Segoe Script", "Arial", "Verdana" !important;
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -7369,11 +7305,6 @@ textarea.form-control-lg {
   background-color: RGBA(252, 244, 240, var(--bs-bg-opacity, 1)) !important;
 }
 
-.text-bg-torrat {
-  color: #000 !important;
-  background-color: RGBA(221, 175, 148, var(--bs-bg-opacity, 1)) !important;
-}
-
 .text-bg-rosa-suau {
   color: #000 !important;
   background-color: RGBA(251, 234, 213, var(--bs-bg-opacity, 1)) !important;
@@ -7453,13 +7384,6 @@ textarea.form-control-lg {
 }
 .link-rosa-suauplus:hover, .link-rosa-suauplus:focus {
   color: #fdf6f3 !important;
-}
-
-.link-torrat {
-  color: #ddaf94 !important;
-}
-.link-torrat:hover, .link-torrat:focus {
-  color: #e4bfa9 !important;
 }
 
 .link-rosa-suau {
@@ -7993,11 +7917,6 @@ textarea.form-control-lg {
 .border-rosa-suauplus {
   --bs-border-opacity: 1;
   border-color: rgba(var(--bs-rosa-suauplus-rgb), var(--bs-border-opacity)) !important;
-}
-
-.border-torrat {
-  --bs-border-opacity: 1;
-  border-color: rgba(var(--bs-torrat-rgb), var(--bs-border-opacity)) !important;
 }
 
 .border-rosa-suau {
@@ -8892,11 +8811,6 @@ textarea.form-control-lg {
   color: rgba(var(--bs-rosa-suauplus-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-torrat {
-  --bs-text-opacity: 1;
-  color: rgba(var(--bs-torrat-rgb), var(--bs-text-opacity)) !important;
-}
-
 .text-rosa-suau {
   --bs-text-opacity: 1;
   color: rgba(var(--bs-rosa-suau-rgb), var(--bs-text-opacity)) !important;
@@ -9016,11 +8930,6 @@ textarea.form-control-lg {
 .bg-rosa-suauplus {
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-rosa-suauplus-rgb), var(--bs-bg-opacity)) !important;
-}
-
-.bg-torrat {
-  --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-torrat-rgb), var(--bs-bg-opacity)) !important;
 }
 
 .bg-rosa-suau {

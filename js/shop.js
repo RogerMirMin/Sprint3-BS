@@ -17,6 +17,7 @@ function buy(id) {
 }
 
 // Exercise 2
+//Versió simple de l'exercici 2; la versió funcional està modificada per reaprofitar-la en exercicis posteriors
 /*function cleanCart() {
     cartList = [];
 }*/
@@ -25,7 +26,7 @@ function cleanCart() {
     cart = [];
     printCart();
     document.getElementById("count_product").innerHTML = 0;
-    alert("Cart has been cleaned");
+    console.log("S'ha esborrat el carret.");
 }
 
 
@@ -38,7 +39,6 @@ function calculateTotal() {
         total += cartList[i]["price"];
     }
     console.log(total);
-    return total;
 }
 
 // Exercise 4
@@ -54,12 +54,13 @@ function generateCart() {
         prod["quantity"] = 1;
     });
 
-
+    //Si cart està buit, hi passem el primer element de cartList. Utilitzo el truc de JSON.parse/stringify per crear una còpia independent de l'original
     if (cart.length == 0) {
-        cart.push(JSON.parse(JSON.stringify(cartList[0])));
-        cartList.shift();
+    cart.push(JSON.parse(JSON.stringify(cartList[0])));
+    cartList.shift();
     }
-
+    
+    //Passem la resta d'elements de cartList al cart
     for (let i = 0; i < cartList.length; i++) {
         for (let j = 0; j < cart.length; j++) {
             if (cartList[i].name == cart[j].name) {
@@ -75,7 +76,6 @@ function generateCart() {
 
     cartList = [];
     console.log(cart);
-    return cart;
 }
 
 // Exercise 5
@@ -110,7 +110,7 @@ function printCart() {
 
     document.getElementById("cart_list").innerHTML = newElements;
     document.getElementById("total_price").innerHTML = totalprice.toFixed(2);
-    console.log("S'ha printejat la cart");
+    console.log("S'ha printejat la cart.");
 }
 
 
@@ -122,7 +122,7 @@ function addToCart(id) {
     // 1. Loop for to the array products to get the item to add to cart
     // 2. Add found product to the cart array or update its quantity in case it has been added previously.
 
-    //Afegim producte al carret
+    //Afegim els productes al carret
     for (let i = 0; i < products.length; i++) {
         if (id == products[i]["id"]) {
             products[i].subtotal = products[i].price;
@@ -142,7 +142,6 @@ function addToCart(id) {
                     }
                 }
             }
-
         }
     }
 
@@ -166,7 +165,7 @@ function removeFromCart(id) {
             cart[i]["quantity"]--;
         }
 
-        /*Reduïm número del carret */
+        //Reduïm número del carret
         var totalQuantity = 0;
         cart.forEach(function (prod) {
             totalQuantity += prod.quantity;
@@ -178,6 +177,7 @@ function removeFromCart(id) {
     applyPromotionsCart();
     printCart();
 }
+
 //Imprimim les dades cridant la funció printCart() --ex. 5
 function open_modal() {
     console.log("Open Modal");
